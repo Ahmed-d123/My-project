@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Your hub for powerful digital tools that elevate your mindset and success.">
+  <title>What Ever It Takes</title>
+  <link rel="stylesheet" href = "style.css"/>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">What Ever It Takes</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Success Begins With Mindset</h1>
+      <p>Discover digital tools to inspire, grow, and win — every single day.</p>
+      <a href="#products" class="btn">Explore Products</a>
+    </div>
+  </section>
+  <section class="glow-text-section">
+  <h1 class="glow-text">Stay Hard</h1>
+</section>
+<section id="products" class="products">
+  <h2>Top Affiliate Collections</h2>
+
+  <!-- T-Shirts Collection -->
+  <div class="collection">
+    <h3 class="collection-title">T-Shirts Collection</h3>
+    <div class="product-list">
+      <div class="product-card">
+        <div class="image-placeholder">Image</div>
+        <h4>Motivational Tee 1</h4>
+        <p>Wear your mindset with pride.</p>
+        <a href="https://example.com/tee1" class="product-btn" target="_blank">Buy Now</a>
+      </div>
+      <div class="product-card">
+        <div class="image-placeholder">Image</div>
+        <h4>Discipline Tee</h4>
+        <p>Discipline equals freedom.</p>
+        <a href="https://example.com/tee2" class="product-btn" target="_blank">Buy Now</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Courses Collection -->
+  <div class="collection">
+    <h3 class="collection-title">Courses Collection</h3>
+    <div class="product-list">
+      <div class="product-card">
+        <div class="image">
+          <img src="Course.jpg" alt="AI Wealth Profit" style="width:100%; height:auto;">
+        </div>
+        <h4>AI Wealth Profit</h4>
+        <p>Harness AI to automate your business and boost profits no tech skills needed.
+<b>AI Wealth Profit </b> guides you step-by-step to success with 75% commission per sale plus upsell earnings.
+Perfect for all traffic sources like Google, Facebook, and TikTok. Start growing your income today!</p>
+        <a href="https://aiwealthprofit.com/#aff=whateverittakes" class="product-btn" target="_blank">Buy Now</a>
+      </div>
+      <div class="product-card">
+        <div class="image-placeholder">Image</div>
+        <h4>Focus & Productivity</h4>
+        <p>Master your time and energy.</p>
+        <a href="https://example.com/course2" class="product-btn" target="_blank">Buy Now</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- E-books Collection -->
+<div class="collection">
+    <h3 class="collection-title">E-books Collection</h3>
+    <div class="product-list">
+      <div class="product-card">
+        <div class="image">
+          <img src="Book.jpg" alt="Do it now book cover" style="width:100%; height: 20%;">
+        </div>
+        <h3>Do it now</h3>
+        <p>Are you tired of watching your goals slip away because of procrastination? <b>Do it Now</b> is the guide you need to stop delaying and start achieving. Learn how to take control of your time, your focus, and your future.</p>
+        <hr style="margin: 16px 0;">
+        <a href="https://www.checkout-ds24.com/redir/554273/whateverittakes/" class="product-btn" target="_blank">Buy Now</a>
+      </div>
+      <div class="product-card">
+        <div class="image">
+          <img src="Book2.jpg" alt="Build Your Character book cover" style="width:100%; height:auto;">
+        </div>
+        <h3>Build Your Character</h3>
+        <p>Have you ever wondered what shapes your personality and defines who you are? <b>Build Your Character</b> reveals how every choice and action molds the unique person you become.</p>
+        <br>
+        <hr style="margin: 16px 0;">
+        <a href="https://www.checkout-ds24.com/redir/554624/whateverittakes/" class="product-btn" target="_blank">Buy Now</a>
+      </div>
+    </div>
+</div>
+</section>
+  <section id="about" class="about">
+    <h2>About This Site</h2>
+    <p>This affiliate marketing site is built for people who believe in doing whatever it takes to achieve greatness.</p>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 What Ever It Takes. Built with passion.</p>
+  </footer>
+<script>
+
+// 2. Scroll fade-in effect
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("fade-in-visible");
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.product-card').forEach(el => {
+  observer.observe(el);
+});
+
+// 3. Smart page title change
+const originalTitle = document.title;
+document.addEventListener('visibilitychange', () => {
+  if (document.hidden) {
+    document.title = '🔥 Don’t give up — Stay Hard!';
+  } else {
+    document.title = originalTitle;
+  }
+});
+</script><button class="dark-mode-toggle" onclick="toggleDarkMode()" id="darkModeBtn">🌙</button>
+
+<script>
+  function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+    document.querySelector('.navbar').classList.toggle('dark-mode');
+    document.querySelector('.footer').classList.toggle('dark-mode');
+    document.querySelector('.about').classList.toggle('dark-mode');
+    document.querySelectorAll('.product-card').forEach(card => card.classList.toggle('dark-mode'));
+    document.querySelectorAll('.product-btn').forEach(btn => btn.classList.toggle('dark-mode'));
+
+    // Toggle icon
+    const btn = document.getElementById("darkModeBtn");
+    if (document.body.classList.contains('dark-mode')) {
+      btn.textContent = '☀️';
+    } else {
+      btn.textContent = '🌙';
+    }
+  }
+</script>
+</body>
+</html>
